@@ -1,24 +1,25 @@
 const status = document.getElementById("discord-status");
 const pfp = document.getElementsByClassName("pfp")[0];
-fetch("https://api.lanyard.rest/v1/users/454920881177624576")
+fetch("https://api.lanyard.rest/v1/users/407649282200436738")
   .then((res) => res.json())
   .then((af) => {
     let discordstatus = [];
 
-    af.data.activities.forEach((stats) => {
-      let name = stats.name || null;
-      let state = stats.state || null;
-      let details = (stats.details) || null;
+    af.data.activities.forEach((lonelil) => {
+      let name = lonelil.name || null;
+      let details = lonelil.details || null;
+      let state = lonelil.state || null;
 
-      if (name != ""){
+      if (name) {
         discordstatus.push(name);
       }
-      if (state != ""){
-        discordstatus.push(state);
-      }
-      if (details != ""){
+      if (details) {
         discordstatus.push(details);
       }
+      if (state) {
+        discordstatus.push(state);
+      }
+      discordstatus.push("");
     });
 
     pfp.style.border = `3px solid #${

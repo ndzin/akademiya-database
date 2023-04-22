@@ -8,7 +8,7 @@ fetch("https://api.lanyard.rest/v1/users/454920881177624576")
     af.data.activities.forEach((stats) => {
       let name = stats.name || null;
       let state = stats.state || null;
-      let details = (res.data.activities[1].details) || null;
+      let details = (stats.details) || null;
 
       if (name != ""){
         discordstatus.push(name);

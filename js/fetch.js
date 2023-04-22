@@ -1,4 +1,5 @@
 const status = document.getElementById("discord-status");
+const { default: axios } = require('axios');
 const pfp = document.getElementsByClassName("pfp")[0];
 axios.get("https://api.lanyard.rest/v1/users/407649282200436738")
   .then(async (res) => {

@@ -7,13 +7,19 @@ fetch("https://api.lanyard.rest/v1/users/407649282200436738")
 
     af.data.activities.forEach((lonelil) => {
       let name = lonelil.name || null;
-      let details = lonelil.details || null;
       let state = lonelil.state || null;
       discordstatus.push(`${name}
-      ${details}
       ${state}
       `);
     });
+
+    af.data.activities[1].forEach((spotify) => {
+      let details = spotify.details || null;
+      if (details != null) {
+      discordstatus.push(`${details}`)
+      };
+    });
+
     pfp.style.border = `3px solid #${
       af.data.discord_status == "online"
         ? "3ba55d"

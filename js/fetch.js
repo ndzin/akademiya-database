@@ -17,7 +17,7 @@ fetch("https://api.lanyard.rest/v1/users/407649282200436738")
         discordstatus.push(details);
       }
       if (state) {
-        discordstatus.push(state);
+        discordstatus.push(`${state}💕`);
       }
       discordstatus.push("");
     });

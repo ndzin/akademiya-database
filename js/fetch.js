@@ -15,9 +15,10 @@ fetch("https://api.lanyard.rest/v1/users/407649282200436738")
 
     af.data.activities[1].forEach((spotify) => {
       let details = spotify.details || null;
-      if (details != null) {
-      discordstatus.push(`${details}`)
+      if (details = null) {
+        details = "no"
       };
+      discordstatus.push(`${details}`)
     });
 
     pfp.style.border = `3px solid #${

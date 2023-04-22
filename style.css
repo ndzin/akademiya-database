@@ -70,7 +70,6 @@ body{
     box-shadow: 0px 0px 15px 5px hsla(0, 4%, 20%, 0.45);
     overflow: auto;
     width: 300px;
-    height: 260px;
   }
 
 @media (max-width: 400px){

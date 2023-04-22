@@ -1,23 +1,23 @@
 const status = document.getElementById("discord-status");
-const { default: axios } = require('axios');
 const pfp = document.getElementsByClassName("pfp")[0];
-axios.get("https://api.lanyard.rest/v1/users/407649282200436738")
-  .then(async (res) => {
+fetch("https://api.lanyard.rest/v1/users/454920881177624576")
+  .then((res) => res.json())
+  .then((af) => {
     let discordstatus = [];
 
-    res.data.activities.forEach((stats) => {
+    af.data.activities.forEach((stats) => {
       let name = stats.name || null;
       let state = stats.state || null;
       let details = (res.data.activities[1].details) || null;
 
       if (name != ""){
-        discordstatus.push(name).toString();
+        discordstatus.push(name);
       }
       if (state != ""){
-        discordstatus.push(state).toString();
+        discordstatus.push(state);
       }
       if (details != ""){
-        discordstatus.push(details).toString();
+        discordstatus.push(details);
       }
     });
 
